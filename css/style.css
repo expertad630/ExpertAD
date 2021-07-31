@@ -1,0 +1,307 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@100&family=Bebas+Neue&family=Cabin&family=Gruppo&display=swap');
+*{
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: radial-gradient(rgba(6, 130, 247, 0.9),rgba(10, 45, 119, 0.9));
+    color: #fff;
+}
+/* ----Section Header---- */
+#header{
+    overflow: hidden;
+    position: fixed;
+    background-color: blueviolet;
+    height: 50px;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+nav{
+    display: flex;
+    width: 90%;
+    margin: auto;
+    align-items: center;
+    justify-content: space-between;
+}
+nav img{
+    width: 50px;
+    /* height: 50px; */
+    cursor: pointer;
+}
+nav h1{
+    display: block;
+    color: #fff;
+    font-size: 30px;
+    font-family: 'Bebas Neue', cursive;
+    letter-spacing: 2px;
+    text-shadow: #0d2931 2px 5px;
+    margin-left: 5px;
+    padding: 0;
+    cursor: default;
+}
+#navlinks{
+    flex: 1;
+    text-align: right;
+}
+#navlinks ul li{
+    display: inline-block;
+    list-style: none;
+    padding: 8px 15px;
+    position: relative;
+    
+}
+#navlinks ul li a{
+    text-decoration: none;
+    color: #fff;
+    margin: auto;
+    font-size: 20px;
+    font-family: 'Kanit', sans-serif;
+    font-weight: 600;
+    transition: 0.5s;
+}
+#navlinks ul li a:hover{
+    color: rgb(14, 234, 241);
+}
+nav .fas{
+    display:none;
+}
+/* header media queury */
+@media(max-width:700px){
+    nav{
+        width: 80%;
+    }
+    nav h1{
+        display: none;
+    }
+    #navlinks ul li{
+        display: block;
+    }
+    #navlinks ul{
+        padding: 20px;
+    }
+    #navlinks ul li a{
+        color: blueviolet;
+        font-size: 30px;
+        font-weight: 800;
+    }
+    #navlinks{
+        position: fixed;
+        background: #fff;
+        height: 100vh;
+        top:0;
+        right: -500px;
+        text-align: left;
+        transition: 1s;
+    }
+    nav .fas{
+        display: block;
+        color: rgb(6, 240, 220);
+        text-align: left;
+        margin: 10px;
+        font-size: 25px;
+        cursor: pointer;
+    }
+}
+/* ----Section Header End---- */
+
+/* ----Section Showcase---- */
+#showcase{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(1,1,1,0.8),rgba(1,1,1,0.5)),url("../img/showcase.jpg");
+    background-position: center;
+    background-size: cover;
+    margin: auto;
+    padding-top: 50px;
+    overflow: hidden;
+}
+.showcase-title{
+    width: 90%;
+    margin: auto;
+    padding-top: 10%;
+    text-align: center;
+}
+.showcase-title h1 {
+    font-size: 90px;
+    font-family: 'Bebas Neue', cursive;
+    letter-spacing: 30px;
+    color: blueviolet;
+}
+.showcase-title h2{
+    font-size: 35px;
+    font-family: 'Kanit', sans-serif;
+    font-weight: 800;
+}
+.showcase-title p{
+    font-size: 20px;
+    font-family: 'Cabin', sans-serif;
+    margin-bottom: 50px;
+}
+
+.show-btn{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 10px 15px 10px 15px;
+    font-size: 18px;
+    font-weight: 800;
+    font-family: 'Cabin', sans-serif;
+    letter-spacing: 2px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+.show-btn:hover{
+    border: 1px solid #25cbfd;
+    background: #25cbfd;
+    transition: 1s;
+}
+@media(max-width:700px){
+    .showcase-title{
+        width: 80%;
+        margin: auto;
+        padding-top: 25%;
+        overflow: hidden;
+    }
+    .showcase-title h1 {
+        font-size: 18vw;
+        letter-spacing: 2vw;
+    }
+    .showcase-title h2{
+        font-size: 10vw;
+    }
+    .show-btn{
+        font-size: 5vw;
+    }
+}
+/* ----Section Showcase End---- */
+
+/* ----Section BlogPosts & Project's---- */
+.post{
+    width: 90%;
+    margin: auto;
+    padding-top: 30px;
+    overflow: hidden;
+    text-align: center;
+}
+.post h1{
+    font-size: 40px;
+    font-family: 'Bebas Neue', cursive;
+    letter-spacing: 5px;
+    text-shadow: #0d2931 2px 5px;
+}
+.post p{
+    font-size: 25px;
+    font-family: 'Kanit', sans-serif;
+    font-weight: 800;
+}
+.post .link{
+    text-decoration: none;
+    color: #0af8ec;
+}
+.row{
+    margin: 10px;
+    padding: 0 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.col{
+    flex-basis: 32%;
+    background: transparent;
+    border-radius: 10px;
+    margin-bottom: 2%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    cursor: default;
+}
+.col:hover{
+    box-shadow: 0 0 20px 0 #0d2931;
+}
+.col h2{
+    font-size: 30px;
+    font-family: 'Cabin', sans-serif;
+    font-weight: 600;
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+.col p{
+    font-size: 20px;
+    font-family: 'Kanit', sans-serif;
+    font-weight: 800;
+    line-height: 30px;
+    letter-spacing: 3px;
+    text-justify: auto;
+    margin: 20px 0;
+}
+@media(max-width:700px){
+    .post{
+        width: 100%;
+    }
+    .row{
+        flex-direction: column;
+    }
+}
+
+/* ----Section BlogPosts & Project's End---- */
+
+/* ----Section Footer---- */
+#footer{
+    width: 100%;
+    background-image: linear-gradient(rgba(1,1,1,0.8),rgba(1,1,1,0.5)),url("../img/footer.jpg");
+    background-position: center;
+    background-size: cover;
+    margin: auto;
+    overflow: hidden;
+    text-align: center;
+}
+.footer-row{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    padding-top: 40px;
+    justify-content: space-between;
+}
+.footer-col{
+    flex-basis: 30%;
+    margin-bottom: 2%;
+    padding: 15px ;
+    cursor: default;
+}
+.footer-col h1{
+    font-size: 25px;
+    font-family: 'Cabin', sans-serif;
+    font-weight: 600;
+    margin-bottom: 5%;
+}
+.footer-col p{
+    font-size: 15px;
+    font-family: 'Kanit', sans-serif;
+    font-weight: 800;
+    line-height: 20px;
+    letter-spacing: 5px;
+    text-justify: auto;
+    margin: 20px 0;
+}
+.footer-col li{
+    list-style: none;
+
+}
+.link{
+    text-decoration: none;
+    color: #0af8ec;
+    font-size: 20px;
+    font-weight: 800;
+    font-family: 'Kanit', sans-serif;
+}
+@media(max-width:700px){
+    .footer-row{
+        flex-direction: column;
+    }
+}
+
+
+
+/* ----Section Footer End---- */
